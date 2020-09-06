@@ -34,17 +34,23 @@
 
         for (let i = 0; i < lines.length; i++) {
 
-            let keys = lines[i].trim().split(" ");
+            let line = lines[i].trim();
 
-            for(let j=0; j < keys.length; j++) {
+            if(line != "") {
 
-                let newKey = convertKey(keys[j], beforeScale, afterScale);
-                newTab += newKey + " ";
+                let keys = line.split(" ");
 
+                for(let j=0; j < keys.length; j++) {
+
+                    let newKey = convertKey(keys[j], beforeScale, afterScale);
+                    newTab += newKey + " ";
+
+                }
+            
             }
 
             newTab += "\n";
-        
+
         }
 
         return newTab;
@@ -63,10 +69,7 @@
         }
 
         let currentKey = scales.indexOf(key);
-
         let newIndex = (currentKey + ( afterScale - beforeScale ) + scales.length) % scales.length;
-
-        console.log(key + " | " + currentKey + " | " + beforeScale + " | " + afterScale + " | " + newIndex);
 
         return scales[newIndex] + sufix;
 
