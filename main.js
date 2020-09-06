@@ -61,9 +61,9 @@
 
         let sufix = "";
 
-        if(key[ key.length-1 ] == "°") {
+        if(key[ key.length-1 ] == "°" || key[ key.length-1 ] == "º" || key[ key.length-1 ] == "^") {
 
-            sufix = key[ key.length-1 ];
+            sufix = "°";
             key = key.substr(0, key.length-1);
         
         }
