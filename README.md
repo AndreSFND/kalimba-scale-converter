@@ -1,4 +1,4 @@
 # kalimba-scale-converter
-A simple web project that converts a kalimba tab to different scales
+I needed a way to convert a kalimba tab to different scales, so there it is
 
 https://andresfnd.github.io/kalimba-scale-converter/
